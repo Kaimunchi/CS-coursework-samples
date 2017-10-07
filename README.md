@@ -7,7 +7,3 @@ Here is a collection of programs from Computer Science courses I have taken at T
 >An introduction to computer science and programming. Discussion of the algorithmic approach to problem solving and the use of a high-level language to design and implement problem solution. Includes a one-hour lab.  
 
 *Coursework Coming Soon*
-
-
-### Disclaimer
-This repository was established to be a showcase of Truman's Computer Science program and my work within it. I am not responsible nor do I endorse any attempts to use the code contained in this repository as submissions for programming assignments.
