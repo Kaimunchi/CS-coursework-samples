@@ -9,4 +9,12 @@ Here is a collection of programs from Computer Science courses I have taken at T
 This course is taught in the Ada language.
 
 + [Statistics](https://github.com/mrbmi513/truman-coursework-samples/tree/master/CS180/Statistics) - A package and accompanying driver program to provide basic statistics about course grades.  
-+ [Simulation](https://github.com/mrbmi513/truman-coursework-samples/tree/master/CS180/Simulation) - A somewhat basic agent-based simulation of a simple economy.  
++ [Simulation](https://github.com/mrbmi513/truman-coursework-samples/tree/master/CS180/Simulation) - A somewhat basic agent-based simulation of a simple economy.
+
+## CS 250 - Systems Programming [Spring 2018]
+>An introduction to systems level programming utilizing both assembly and high level languages.
+
+This course is taught in the C/C++ languages.
+
++ [RPN Calculator](https://github.com/mrbmi513/truman-coursework-samples/tree/master/CS250/RPN_Calculator) - A C program that implements a Reverse Polish Notation calculator with a dynamically-allocated stack.
++ [Poker Hands](https://github.com/mrbmi513/truman-coursework-samples/tree/master/CS250/Poker_Hands) - A C++ program that generates and ranks Poker hands, utilizing the object-oriented capabilities of C++.  
