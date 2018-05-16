@@ -11,6 +11,12 @@ This course is taught in the Ada language.
 + [Statistics](https://github.com/mrbmi513/truman-coursework-samples/tree/master/CS180/Statistics) - A package and accompanying driver program to provide basic statistics about course grades.  
 + [Simulation](https://github.com/mrbmi513/truman-coursework-samples/tree/master/CS180/Simulation) - A somewhat basic agent-based simulation of a simple economy.
 
+## CS 191 - Computing Structures [Spring 2018]
+>Uses the computer as a tool to introduce discrete structures and techniques for computing. Analysis of algorithms, methods of proof, counting techniques, and discrete probability.
+
+This course is a math-based course with some programming in the Prolog language.
++ [Assignment 1](https://github.com/mrbmi513/truman-coursework-samples/tree/master/CS191/ingli_1.pl) - Simple Prolog knowledgebase to solve logic problems in the course textbook.
+
 ## CS 250 - Systems Programming [Spring 2018]
 >An introduction to systems level programming utilizing both assembly and high level languages.
 
