@@ -3,6 +3,9 @@ Here is a collection of programs from Computer Science courses I have taken at T
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />These works are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> unless otherwise specified in an individual program's README file.
 
+### A Note to Current Students
+If you're a current student and ran across this repo, congrats! You've learned to use your resources! But use them responsibly, you must. I do not promote nor condone any misuse of this code for academic dishonesty, nor am I responsible for any consequences resulting from such misuse. Additionally, using this code without attribution also breaks the CC license's requirements, which may or may not have legal ramifications. You've been warned, young padawan.
+
 ## CS 180 - Foundations of Computer Science I [Fall 2017]
 >An introduction to computer science and programming. Discussion of the algorithmic approach to problem solving and the use of a high-level language to design and implement problem solution. Includes a one-hour lab.  
 
