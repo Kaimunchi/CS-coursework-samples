@@ -11,19 +11,19 @@ If you're a current student and ran across this repo, congrats! You've learned t
 
 This course is taught in the Ada language.
 
-+ [Statistics](https://github.com/mrbmi513/truman-coursework-samples/tree/master/CS180/Statistics) - A package and accompanying driver program to provide basic statistics about course grades.  
-+ [Simulation](https://github.com/mrbmi513/truman-coursework-samples/tree/master/CS180/Simulation) - A somewhat basic agent-based simulation of a simple economy.
++ [Statistics](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS180/Statistics) - A package and accompanying driver program to provide basic statistics about course grades.  
++ [Simulation](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS180/Simulation) - A somewhat basic agent-based simulation of a simple economy.
 
 ## CS 191 - Computing Structures [Spring 2018]
 >Uses the computer as a tool to introduce discrete structures and techniques for computing. Analysis of algorithms, methods of proof, counting techniques, and discrete probability.
 
 This course is a math-based course with some programming in the Prolog language.
-+ [Assignment 1](https://github.com/mrbmi513/truman-coursework-samples/tree/master/CS191/ingli_1.pl) - Simple Prolog knowledgebase to solve logic problems in the course textbook.
++ [Assignment 1](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS191/ingli_1.pl) - Simple Prolog knowledgebase to solve logic problems in the course textbook.
 
 ## CS 250 - Systems Programming [Spring 2018]
 >An introduction to systems level programming utilizing both assembly and high level languages.
 
 This course is taught in the C/C++ languages.
 
-+ [RPN Calculator](https://github.com/mrbmi513/truman-coursework-samples/tree/master/CS250/RPN_Calculator) - A C program that implements a Reverse Polish Notation calculator with a dynamically-allocated stack.
-+ [Poker Hands](https://github.com/mrbmi513/truman-coursework-samples/tree/master/CS250/Poker_Hands) - A C++ program that generates and ranks Poker hands, utilizing the object-oriented capabilities of C++.  
++ [RPN Calculator](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS250/RPN_Calculator) - A C program that implements a Reverse Polish Notation calculator with a dynamically-allocated stack.
++ [Poker Hands](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS250/Poker_Hands) - A C++ program that generates and ranks Poker hands, utilizing the object-oriented capabilities of C++.  
