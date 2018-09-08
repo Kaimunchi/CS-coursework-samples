@@ -11,6 +11,8 @@ If you're a current student and ran across this repo, congrats! You've learned t
 
 This course is taught in the Ada language.
 
+**Note:** This is *not* the updated version of the course, introduced in Fall 2018, that is taught in the C++ language.
+
 + [Statistics](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS180/Statistics) - A package and accompanying driver program to provide basic statistics about course grades.  
 + [Simulation](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS180/Simulation) - A somewhat basic agent-based simulation of a simple economy.
 
