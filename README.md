@@ -25,7 +25,22 @@ This course is a math-based course with some programming in the Prolog language.
 ## CS 250 - Systems Programming [Spring 2018]
 >An introduction to systems level programming utilizing both assembly and high level languages.
 
-This course is taught in the C/C++ languages.
+This course is taught in the C/C++ languages, with references to x86 Assembly.
 
 + [RPN Calculator](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS250/RPN_Calculator) - A C program that implements a Reverse Polish Notation calculator with a dynamically-allocated stack.
 + [Poker Hands](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS250/Poker_Hands) - A C++ program that generates and ranks Poker hands, utilizing the object-oriented capabilities of C++.  
+
+## CS 260 - Object Oriented Programming and Design [Fall 2018]
+>A continuation of Foundations of Computer Science II. Event-driven programming, design patterns, collections, generics, graphical user interfaces, and an introduction to concurrent programming.
+
+This course is taught in the Java language.
+
++ [FileSync](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS260/fileSync) - A Client/Server solution to back up files from one computer to another over the network.
++ [Multithreaded Fibonacci Prime](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS260/fib_prime) - A multithreaded program to calculate Fibonacci Prime numbers. Utilizes the `ExecutorService` and a custom thread-safe circular buffer utilizing `Lock` and `Condition`s
+
+## CS 291 - Models of Computation [Fall 2018]
+>Logic: propositional calculus, first-order predicate calculus. Formal reasoning: natural deduction, resolution. Applications to program correctness and automatic reasoning. Formal models of computation: regular languages, finite automata, grammars, pushdown automata, Turing machines, classes P and NP, uncomputability, the halting problem.
+
+This course is a theory course with some programming in the Prolog language.
+
++ [String Processing/FA Project](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS291/string_processing_fa) - A project I designed and led where students develop a regular expression for a string validation task, find an FA for that regular expression, and implement that FA in Prolog.
