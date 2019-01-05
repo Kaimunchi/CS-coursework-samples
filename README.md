@@ -39,7 +39,7 @@ This course is taught in the Java language.
 + [Multithreaded Fibonacci Prime](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS260/fib_prime) - A multithreaded program to calculate Fibonacci Prime numbers. Utilizes the `ExecutorService` and a custom thread-safe circular buffer utilizing `Lock` and `Condition`s
 
 ## CS 291 - Models of Computation [Fall 2018]
->Logic: propositional calculus, first-order predicate calculus. Formal reasoning: natural deduction, resolution. Applications to program correctness and automatic reasoning. Formal models of computation: regular languages, finite automata, grammars, pushdown automata, Turing machines, classes P and NP, uncomputability, the halting problem.
+>Logic: propositional calculus, first-order predicate calculus. Formal reasoning: natural deduction, resolution. Applications to program correctness and automatic reasoning. Formal models of computation: regular languages, finite automata, grammars, pushdown automata.
 
 This course is a theory course with some programming in the Prolog language.
 

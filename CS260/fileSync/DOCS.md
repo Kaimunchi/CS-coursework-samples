@@ -94,7 +94,7 @@ Catalogs files' metadata (recursively) in a home directory
 Constructs a FileLog with the given home directory
 
  * **Parameters:** `home` — home directory
- * **Precondition:88 home must refer to a directory
+ * **Precondition:** home must refer to a directory
 
 ## `public FileLog()`
 
