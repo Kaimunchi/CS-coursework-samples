@@ -60,4 +60,4 @@ This course is taught in the C++ language.
 This course is taught in the MIPS Assembly language.
 
 + [Project 1](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS330/project_1) - Implements a selection sort in MIPS
-+ [Project 2](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS330/project_1) - Implements recursively defined multiplication and exponentiation in MIPS
++ [Project 2](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS330/project_2) - Implements recursively defined multiplication and exponentiation in MIPS
