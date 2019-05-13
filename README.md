@@ -44,3 +44,20 @@ This course is taught in the Java language.
 This course is a theory course with some programming in the Prolog language.
 
 + [String Processing/FA Project](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS291/string_processing_fa) - A project I designed and led where students develop a regular expression for a string validation task, find an FA for that regular expression, and implement that FA in Prolog.
+
+## CS 310 - Data Structures and Algorithms [Spring 2019]
+> A continuation of the study of abstract data types and their implementations in a high-level language. Topics include lists, trees, priority queues, and graphs as well as efficient searching and sorting algorithms.
+
+This course is taught in the C++ language.
+
++ [RNA Folding/Hash Functions](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS310/rna_and_hash) - An assignment detailing RNA Folding via Dynamic Programming and Hashing.
++ [Backtracking](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS310/backtracking) - An assignment to solve the nqueens problem.
++ [Branch and Bound](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS310/branch_and_bound) - An assignment to solve the job assignment problem via Branch and Bound.
+
+## CS 330 - Computer Architecture and Organization
+> An introduction to the levels of hardware and software in a computer system. Topics include digital logic, addressing, primary and secondary storage, microcode, interrupts, and alternate architectures.
+
+This course is taught in the MIPS Assembly language.
+
++ [Project 1](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS330/project_1) - Implements a selection sort in MIPS
++ [Project 2](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS330/project_1) - Implements recursively defined multiplication and exponentiation in MIPS
