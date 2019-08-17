@@ -61,3 +61,14 @@ This course is taught in the MIPS Assembly language.
 
 + [Project 1](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS330/project_1) - Implements a selection sort in MIPS
 + [Project 2](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS330/project_2) - Implements recursively defined multiplication and exponentiation in MIPS
+
+## CS 430 - Database Systems
+> Fundamentals of current design approaches in database systems, including extensive work with a commercially available system.
+
+This course is taught mainly with MySQL, with an introduction to MongoDB.
+
+The following three assignments showcase the various stages in the database design process for two use cases: a `University` database and an `MLB` database.
+
++ [Assignment 3: E-R Diagrams](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS430/assignment_3)
++ [Assignment 5: Normalization and Functional Dependencies](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS430/assignment_5)
++ [Assignment 6: Use Case Queries and MongoDB Design/Queries](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS430/assignment_6)
