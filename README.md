@@ -54,7 +54,7 @@ This course is taught in the C++ language.
 + [Backtracking](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS310/backtracking) - An assignment to solve the nqueens problem.
 + [Branch and Bound](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS310/branch_and_bound) - An assignment to solve the job assignment problem via Branch and Bound.
 
-## CS 330 - Computer Architecture and Organization
+## CS 330 - Computer Architecture and Organization [Spring 2019]
 > An introduction to the levels of hardware and software in a computer system. Topics include digital logic, addressing, primary and secondary storage, microcode, interrupts, and alternate architectures.
 
 This course is taught in the MIPS Assembly language.
@@ -62,7 +62,7 @@ This course is taught in the MIPS Assembly language.
 + [Project 1](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS330/project_1) - Implements a selection sort in MIPS
 + [Project 2](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS330/project_2) - Implements recursively defined multiplication and exponentiation in MIPS
 
-## CS 430 - Database Systems
+## CS 430 - Database Systems [Summer 2019]
 > Fundamentals of current design approaches in database systems, including extensive work with a commercially available system.
 
 This course is taught mainly with MySQL, with an introduction to MongoDB.
