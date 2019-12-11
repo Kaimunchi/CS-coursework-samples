@@ -72,3 +72,39 @@ The following three assignments showcase the various stages in the database desi
 + [Assignment 3: E-R Diagrams](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS430/assignment_3)
 + [Assignment 5: Normalization and Functional Dependencies](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS430/assignment_5)
 + [Assignment 6: Use Case Queries and MongoDB Design/Queries](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS430/assignment_6)
+
+## CS 315 - Internet Programming [Fall 2019]
+> Teaches programming concepts that are particularly relevant to building large applications for the World Wide Web. This is primarily a programming course, so significant programming experience is required. Possible topics include: HTML, CSS, ~~Perl~~, Javascript, ~~Java applets, servlets~~, PHP, and XML.
+
+This course is taught in HTML/CSS/JS, PHP with PDO, and MySQL.
+
++ [Semester Project: Site for Truman's Baldwin Auditorium](https://ice.brandoningli.com/cs315/auditorium/milestone4/index.php)
+  +  Please be a kind neighbor and don't deface the site.
+  +  This is the fourth of four milestones. To see the previous ones, head to `/auditorium/milestone1` for example.
+     +  Milestone 1: HTML/CSS
+     +  Milestone 2: Basic PHP
+     +  Milestone 3: JS
+     +  Milestone 4: PHP/MySQL and Finishing Touches
+  +  Source Code Available Upon Request
++  [Homework 3: Stanley Cup Trivia](https://ice.brandoningli.com/cs315/homework3/)
+   +  Source Code Available Upon Request
+
+## CS 455 - Computer Security Fundamentals [Fall 2019]
+> This course provides an introduction to the theory and practice of information security. Students learn formal models of security and various aspects of systems security including access control, hacks/attacks, systems and programs security, intrusion detection, cryptography, networks and distributed systems security, worms and viruses, and other Internet provisions for security. Students develop the skills necessary to formulate and address the security needs of enterprise and personal environments.
+
+A Lab component of this course provided by [InfoSec Learning](https://www.infoseclearning.com/)
+
++ [Semester Project: truBlock, an Ad Blocker for FireFox](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS455/truBlock)
+  + Imported to GitLab from our team's [GitHub Repository](https://github.com/brandoningli/cs-455-project); same code exists between the two.
+
+Labs Completed include:
++ Crafting and Deploying Malware Using a Remote Access Trojan
++ Using Public Key Encryption to Secure Messages
++ Using Browser Exploitation to Take Over a Host's Computer
++ Attacking and Defending Linux
++ Cracking Passwords on Linux Systems
++ Intrusion Detection using Snort
++ Writing Custom [Snort] Rules
++ IPS, SYSLOG, and NTP
++ Steganography
++ Abusing a Stateful Firewall
