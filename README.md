@@ -108,3 +108,39 @@ Labs Completed include:
 + IPS, SYSLOG, and NTP
 + Steganography
 + Abusing a Stateful Firewall
+
+## CS 484 - Topics: Embedded Systems [Spring 2020]
+> After taking this course, the student should be able to do the following, all in the context of a typical modern microcontroller.
+> + Explain the operation of the basic components of electric circuits including conductors, switches, resistors, and capacitors.
+> + Explain the fundamental circuit laws relating voltage, amperage, and resistance.
+> + Explain the operation of logic gates and how they are combined into integrated circuits.
+> + Demonstrate the use of a datasheet to aid in the design of a simple circuit.
+> + Demonstrate how to map from high-level language patterns into assembly and machine language notations.
+> + Show how fundamental high-level programming constructs are implemented at the machine-language level.
+> + Understand and use subroutine calls at the assembly level.Understand and use interrupts and I/O operations. Explain how interrupts are used to implement I/O control and data transfers.
+> + Distinguish the main types of memory technology (e.g., SRAM, DRAM, flash) and use them appropriately in an embedded system.
+> + Write simple programs at the assembly or machine level for string processing and manipulation. Demonstrate how to interface a microcontroller with external devices for output, such as LEDs and LCD panels.
+> + Explain the analog-to-digital conversion process and demonstrate how to perform ADC using an external voltage source.
+> + Explain the pulse width modulation process to convert digital to analog and demonstrate using PWM for useful results such as sound generation and servo control.
+> + Explain timers and interrupts and demonstrate their use in C and assembly language programs.
+> + Explain serial IO and the use of UART, I2C, and SPI in microcontroller IO.  Demonstrate the use of these protocols in microcontroller programs.
+
+This course is taught in AVR Assembly and C.
+
++ [Simon Game](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS484/simon) utilizing all of the concepts learned in the course, including ADC, UART, 
+ PWM, and button debounce techniques.
++ [Project 1](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS484/proj1), a simple introductory program making LEDs light in sequence.
+
+## CS 470 - Networks [Spring 2020]
+> An introduction to current computer communication technology including protocol structures and ~~overview of physical media usage. Additional topics include privacy, security, data representation, and data compression.~~
+
++ [Project 1](https://github.com/brandoningli/cs-470-project1), a team project to implement a "heartbeat" protocol in both client-server and peer-to-peer configurations.
++ [Project 2](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS470/project2), an individual project to simulate TCP calculations using ICMP pings.
+
+## CS 435 - Parallel and Distributed Processing [Spring 2020]
+> An introduction to parallel and distributed processing and programming concepts and techniques. Course content includes discussions of different types of parallel and distributed machines and machine models, data parallelism, the design and analysis of parallel algorithms, and the development of parallel programs.
+
+This course is taught in Java.
+
++ [Project 1](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS435/proj1), a multithreaded program to find a common meeting time
++ [Project 3](https://git.brandoningli.com/brandon/truman-coursework-samples/tree/master/CS435/proj3), a multithreaded program utilizing concurrent buffers to perform string manipulations.

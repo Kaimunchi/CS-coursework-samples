@@ -1,0 +1,294 @@
+\documentclass[11pt]{article}
+\usepackage[paper=letterpaper,margin=1in]{geometry}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\usepackage{upquote}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue, anchorcolor=blue]{hyperref}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{commentGreen}{rgb}{0,0.4,0}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{
+numbers=left,
+xleftmargin=5mm,
+showspaces=false,
+showtabs=false,
+showstringspaces=false,
+basicstyle=\ttfamily,
+commentstyle=\color{commentGreen},
+keywordstyle=\color{blue},
+stringstyle=\color{mauve},
+breaklines=true,
+breakatwhitespace=true,
+postbreak=\mbox{\textcolor{black}{$\hookrightarrow$}\space},
+frame=single,
+rulecolor=\color{black}
+}
+\usepackage{fancyhdr}
+\usepackage{titling}
+%NOTE: Define Author, Title AFTER this package is imported.
+\fancypagestyle{myfancy}{
+\fancyhead[L]{\theauthor}
+\fancyhead[C]{\thetitle}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{}
+}
+\pagestyle{myfancy}
+\usepackage{pdflscape}
+
+\begin{document}
+  \title{CS 470 Project 2: TCP Simulation}
+  \author{Brandon Ingli}
+  \date{\today}
+
+  \maketitle
+  \tableofcontents
+  \listoffigures
+  \clearpage
+
+  \section{The Code}
+  \subsection{\texttt{tcpsim.sh}}
+  \lstinputlisting[language=bash]
+  {../tcpsim_uncommented.sh} %File Path to code to print
+  
+  \begin{itemize}
+    \item \textbf{Lines 2--3:} Set the $\alpha$ and $\beta$ values for the formulas
+    \item \textbf{Lines 5--8:} Set up data arrays for the site to ping and variables to keep track of
+    \item \textbf{Lines 10--16:} For every site given as a parameter, add it to the \texttt{SITE} array, and initialize 
+          a spot in the other>et a variable for the last index of the arrays
+    \item \textbf{Line 18:} Establish the last index in the arrays
+    \item \textbf{Line 20:} Start the timer at time = 1
+    \item \textbf{Line 22:} Remove any previous data
+    \item \textbf{Lines 24--28:} Set up the directory structure for the data
+    \item \textbf{Lines 30--41:} Round 1 of pinging
+      \begin{itemize}
+        \item \textbf{Line 31:} Loop from 0 to \texttt{MAXINDEX} inclusive, step by 1
+        \item \textbf{Line 34:} Ping and set the \texttt{ESTRTT} as the sample RTT
+          \begin{itemize}
+            \item \texttt{ping -c 1 "\${SITE[\$i]}"} sends one ping
+            \item \texttt{tail -1} gets the last line of output, which are the statistics
+            \item \texttt{awk -F '/' '\{print \$5\}'} pulls out the average ping time in ms, which for one ping is the ping time
+          \end{itemize}
+        \item \textbf{Lines 36--37:} Write this sample RTT to the Est RTT and Sample RTT data files
+        \item \textbf{Line 41:} Increment the current time by 5
+      \end{itemize}
+    \item \textbf{Lines 43--63:} Rounds 2 to 100 of pinging
+      \begin{itemize}
+        \item \textbf{Line 43:} Loop from 2 to 100 inclusive, step by 1
+        \item \textbf{Line 45:} Sleep for 5 seconds first
+        \item \textbf{Line 47:} For every site in the array\dots
+        \item \textbf{Line 50:} Get the Sample RTT by pinging; see line 34's explanation
+        \item \textbf{Line 51:} Calculate the EstimatedRTT value; \texttt{bc} is used because there are 
+                floating point numbers involved, which bash cannot do natively
+        \item \textbf{Line 52:} Calculate the Sample Deviation using \texttt{bc}; Absolute value is done by removing 
+                the \texttt{-} character if it appears using \texttt{tr}
+        \item \textbf{Line 53:} Calculate the RTT Deviation using \texttt{bc}
+        \item \textbf{Line 54:} Calculate the timeout value using \texttt{bc}
+        \item \textbf{Lines 56--58:} Write the time/data pairs to the appropriate files
+        \item \textbf{Line 62:} Increment the time by 5 seconds
+      \end{itemize}
+    \item \textbf{Line 65:} Call the \texttt{plotit.sh} script to render the plots. This is its own script to make it 
+          easier to re-plot with new graph settings without fetching new data.
+  \end{itemize}
+
+  \subsection{\texttt{plotit.sh}}
+  \lstinputlisting[language=bash]
+  {../plotit.sh} %File Path to code to print
+
+  \begin{itemize}
+    \item \textbf{Lines 3--4:} Set the height and width in pixels of the resulting plot
+    \item \textbf{Lines 6--7:} Remove existing plots and make the root directory for plots again
+    \item \textbf{Line 9:} For every site that we have data for in \texttt{data/}\dots
+    \item \textbf{Line 12:} Make the directory for that site's plots
+    \item \textbf{Line 14:} For the timeout plot, no key, label the x and y axes
+    \item \textbf{Line 15:} Setup the \texttt{PNG} output and set 10pt Times-Roman font
+    \item \textbf{Line 16:} Set the output filename and title of graph accordingly
+    \item \textbf{Line 17:} Plot the data
+    \item \textbf{Line 19:} For the RTT plot, put the key outside the graph, label the x and y axes
+    \item \textbf{Line 20:} Setup the \texttt{PNG} output and set 10pt Times-Roman font
+    \item \textbf{Line 21:} Set the output filename and title of graph accordingly
+    \item \textbf{Line 22:} Plot the sample rtt data and label appropriately
+    \item \textbf{Line 23:} Plot the estimated rtt data abd label appropriately
+  \end{itemize}
+
+  \section{The Data}
+  The four servers I chose to ping were DNS servers, as they were more likely to not reject 
+  my frequent pings. They were\dots
+  \begin{itemize}
+    \item 8.8.8.8 (US)
+    \item 101.110.40.225 (Japan)
+    \item 88.208.228.34 (UK)
+    \item 185.203.224.102 (Spain)
+  \end{itemize}
+
+  The data collected consisted of 3 files for each site:
+  \begin{itemize}
+    \item \texttt{samplertt.dat} holds pairs of time $t$ and ping time
+    \item \texttt{estrtt.dat} holds pairs of time $t$ and the calculated EstRTT
+    \item \texttt{timeout.dat} holds pairs of time $t$ and the calculated timeout value
+  \end{itemize}
+
+  Here's a short sampling of what the \texttt{samplertt.dat} file for 101.110.40.225 looks like:
+  \lstinputlisting[firstline=1, lastline=10]
+  {../data/101.110.40.225/samplertt.dat} %File Path to code to print
+
+  \begin{landscape}
+    \begin{figure}[H]
+      \centering
+
+      \begin{subfigure}[t]{.675\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../plot/8.8.8.8/rtt.png}
+        \caption{8.8.8.8 (US)}
+        \label{fig:usartt}
+      \end{subfigure}
+      \hfill
+      \begin{subfigure}[t]{.675\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../plot/88.208.228.34/rtt.png}
+        \caption{88.208.228.34 (UK)}
+      \end{subfigure}
+
+      \medskip
+
+      \begin{subfigure}[t]{.675\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../plot/101.110.40.225/rtt.png}
+        \caption{101.110.40.225 (Japan)}
+      \end{subfigure}
+      \hfill
+      \begin{subfigure}[t]{.675\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../plot/185.203.224.102/rtt.png}
+        \caption{185.203.224.102 (Spain)}
+      \end{subfigure}
+
+      \caption{Estimated and Sample RTT Values}
+      \label{fig:rtt}
+    \end{figure}
+
+    \begin{figure}[H]
+      \centering
+
+      \begin{subfigure}[t]{.675\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../plot/8.8.8.8/timeout.png}
+        \caption{8.8.8.8 (US)}
+      \end{subfigure}
+      \hfill
+      \begin{subfigure}[t]{.675\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../plot/88.208.228.34/timeout.png}
+        \caption{88.208.228.34 (UK)}
+      \end{subfigure}
+
+      \medskip
+
+      \begin{subfigure}[t]{.675\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../plot/101.110.40.225/timeout.png}
+        \caption{101.110.40.225 (Japan)}
+      \end{subfigure}
+      \hfill
+      \begin{subfigure}[t]{.675\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../plot/185.203.224.102/timeout.png}
+        \caption{185.203.224.102 (Spain)}
+      \end{subfigure}
+
+      \caption{Timeout Values}
+      \label{fig:timeout}
+    \end{figure}
+    \clearpage
+  \end{landscape}
+  
+  \section{Discussion of Results}
+  \subsection{RTT}
+
+  The graphs of my results for RTT are found in Figure \ref{fig:rtt} on page \pageref{fig:rtt}. 
+  The purple line represents the Sample RTT values, while the green line represents the calculated 
+  Estimated RTT value.
+
+  It is evident that the Sample RTT values change rapidly on all four graphs, with various unpredictable 
+  peaks and valleys. However, the Estimated RTT values remain relatively stable since it is a 
+  weighted average. 
+
+  After a larger dip as the weighed average of the Estimated RTT is established, the estimated RTT 
+  for the US remained relatively stable. There are rises and falls along the way, but all values remain 
+  within 10 milliseconds or so of each other. Peaks and valleys on the Estimated RTT mirror those of 
+  the sample RTT, albeit slightly delayed and of a much smaller magnitude. Take, for example, the 
+  large jump from $\approx t=265 \text{ to } t=270$. The sample RTT jumps significantly from 
+  about 26ms to more than 80ms, and immediately back near 30ms. This 54ms spike in sample RTT 
+  resulted in only about a 5ms jump in the estimated RTT, meaning the weighted average is 
+  stabilizing the values as it should.
+
+  The server in the UK is pretty similar. Large spikes, such as between $t=230$ and $t=245$, or 
+  $t=350$ and $t=360$, result in minor spikes in the Estimated RTT, which then quickly correct themselves 
+  to the nominal value.
+
+  The data out of Japan is consistently variable, or in other words the peaks and valleys 
+  are somewhat predictable. The two extremes average out to be relatively stable, as indicated 
+  by the Estimated RTT line, after an initial period of establishing the average from the 
+  initial sample RTT. We see only one large spike in the sample RTT near the end of the 
+  test period, which is again met with a smaller magnitude spike in Estimated RTT. If 
+  the test were to run longer, I would suspect the Estimated RTT line would return to 
+  a similar level as before the spike.
+
+  The data out of Spain is the most interesting of the four. We can see the bursty nature 
+  of the Internet through the sample RTT's periods of massive spikes and smaller changes. 
+  Nonetheless, the Estimated RTT stays relatively constant, and has an overall 
+  positive trend as the sample RTT spikes average larger and larger.
+
+  These tests were run at about 11:00pm CDT (5am in the UK, 6am in Spain, and 1pm in Japan). 
+  Since these were all DNS servers, it can be safe to conclude that in the UK and Spain, 
+  local DNS caches may have been flushed and obtaining new information, creating periods 
+  of congestion that are especially evident in Spain's data. Japan's latency is overall 
+  the largest, which can most likely be attributed to physical distance and the increased 
+  probability of loss as a result. On the contrary, the US server chosen, Google's DNS, 
+  is on the same continent and most likely connected through Google's Tier 1 network, 
+  ensuring lightning fast responses under 85ms.
+
+  \subsection{Timeout}
+
+  The graphs of my results for calculated timeout values are found in Figure \ref{fig:timeout} 
+  on page \pageref{fig:timeout}. The initial timeout of 1 second (1000 ms) is not shown in the 
+  data nor on the graphs so that the scaling is more suited for the data we care about.
+
+  On all four graphs, each graph starts with a large increase as the \texttt{EstRTT} and \texttt{DevRTT} 
+  get more data for their weighted averages, and the timeout formula adds in the safety margin 
+  of 4 \texttt{DevRTT}.
+
+  If we were to overlay a best-fit line on each graph once the Timeout value was 
+  established (for example, fitting a line starting around $t=150$ in the Japan 
+  data once the initial spike is averaged out), we would see that all four would have 
+  a net positive slope. This means that the timeout value grows over time and potentially indicates  
+  increased congestion over the connection lifetime.
+
+  Because it is a main component of the formula for calculating timeout values, the graphs for 
+  timeout expectedly follow a similar trend to the estimated RTT graphs. The data from Japan 
+  shows this most clearly. The Estimated RTT starts rather high, as the first few RTT samples 
+  were found on a peak. Consequently, the timeout values start rather high as well. Then, as 
+  the estimated RTT dropped rather quickly, so too did the timeout values. Even the minute 
+  spikes in Estimated RTT are pretty closely replicated in the timeout graph in shape 
+  and duration.
+
+  We can also say something about the \texttt{DevRTT} from these graphs. Large spikes in 
+  timeout, like that from $\approx t=265 \text{ to } t=270$ in the data from the 
+  US, indicates a large deviation 
+  in nearby RTTs that can also be seen in Figure \ref{fig:usartt} in that same time frame.
+
+  \subsection{Overall Reaction}
+  Overall, I'm surprised at the speed to which communication over the Internet can occur 
+  over large distances. Data can be sent from my home in St. Louis to Google's servers 
+  in Mountain View and back in less than half the average length of the blink of a 
+  human eye!\footnote{100ms per \url{https://www.somatechnology.com/blog/thursday-thoughts/fast-average-blink/}} 
+  Additionally, data can traverse undersea cables across the ocean and back in under 
+  two blinks of an eye, which is astonishing when put into perspective. This speed 
+  has really helped to globalize society in ways previously unimaginable, especially 
+  considering the current pandemic.
+
+\end{document}
